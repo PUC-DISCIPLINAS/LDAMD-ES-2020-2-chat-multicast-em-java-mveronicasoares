@@ -54,7 +54,7 @@ public class Cliente {
                 System.out.println("IO: " + e.getMessage());
             }
 
-
+			//exibir mensagens
             Thread thread = new Thread(() -> {
                 try {
                     while (ativo) {
