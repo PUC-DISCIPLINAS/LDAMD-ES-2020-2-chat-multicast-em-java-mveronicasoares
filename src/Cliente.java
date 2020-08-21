@@ -22,6 +22,18 @@ public class Cliente {
 			DataOutputStream out = new DataOutputStream(s.getOutputStream());
 			System.out.println("Insira seu nome de usuario: ");
 			String nomeUsuario = ler.nextLine();
+            String entrada;
+			do {
+			    System.out.println("Deseja ingressar no chat? \n\ts - sim\n\tn - nao");
+			    entrada = ler.nextLine();
+			    if (entrada.equals("n")) {
+			        System.out.println("## ENCERRANDO PROCESSO##");
+			        System.exit(200);
+			    } else if (!entrada.equals("s")) {
+			        System.out.println("ERRO: favor inserir um comando valido.");
+                }
+
+			} while (!entrada.equals("s")&&!entrada.equals("n"));
 			String comandoEntrada = "ingressar-" + nomeUsuario;
 			String comandoSaida = "sair-" + nomeUsuario;
 			out.writeUTF(comandoEntrada);
@@ -68,6 +80,7 @@ public class Cliente {
 					out.writeUTF(comandoSaida);
 					ativo = false;
 					System.out.println("## CHAT ENCERRADO COM SUCESSO ##");
+                    System.exit(200);
 				}else{
 				    mensagemComAutor = "<"+ nomeUsuario + "> :  " + mensagem;
                     byte[] message = mensagemComAutor.getBytes();

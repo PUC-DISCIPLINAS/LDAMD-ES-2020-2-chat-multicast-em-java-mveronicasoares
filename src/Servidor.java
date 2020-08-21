@@ -51,7 +51,7 @@ class Connection extends Thread {
 			out = new DataOutputStream(clientSocket.getOutputStream());
 			this.start();
 		} catch (IOException e) {
-			System.out.println("Conecao:" + e.getMessage());
+			System.out.println("Conexao:" + e.getMessage());
 		}
 	}
 
@@ -84,7 +84,7 @@ class Connection extends Thread {
 		} finally {
 			try {
 				clientSocket.close();
-				System.out.println("Servidor: fechando conex�o com cliente.");
+				System.out.println("Servidor: fechando conexao com cliente.");
 			} catch (IOException e) {
 				/* close falhou */
 			}
