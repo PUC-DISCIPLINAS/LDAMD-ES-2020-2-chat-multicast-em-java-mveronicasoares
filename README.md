@@ -9,7 +9,7 @@
 
 
 ### Comandos: 
-* **Entrar no chat**: inserir um nome e escolher opcao s
+* **Entrar no chat**: inserir um nome e escolher a opção s
 * **Enviar mensagem no chat**: digitar um texto e dar enter
 * **Sair do chat**: sair
   
